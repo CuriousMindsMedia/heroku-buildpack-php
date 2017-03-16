@@ -191,7 +191,7 @@ export PATH="/app/.heroku/php/bin:/app/.heroku/php/sbin:$PATH"
 EOF
 # this gets sourced on dyno boot
 cat > ${OUT_PREFIX}/bin/profile.php.sh <<'EOF'
-export PATH="$HOME/.heroku/php/bin:$HOME/.heroku/php/sbin:$PATH"
+export PATH="$HOME/backend/.heroku/php/bin:$HOME/backend/.heroku/php/sbin:$PATH"
 EOF
 
 python $(dirname $BASH_SOURCE)/_util/include/manifest.py "heroku-sys-php" "heroku-sys/${dep_name}" "$dep_version" "${dep_formula}.tar.gz" "$MANIFEST_REQUIRE" "$MANIFEST_CONFLICT" "$MANIFEST_REPLACE" "$MANIFEST_EXTRA" > $dep_manifest
