@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 backend=$(pwd)/backend
-export PATH=$PATH:$backend/.heroku/php/bin
+export PATH=$PATH:$backend/.heroku/php/bin:$backend/.heroku/php/sbin
 
 # fail hard
 set -o pipefail
