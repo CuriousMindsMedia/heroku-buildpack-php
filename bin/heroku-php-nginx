@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+backend=$(pwd)/backend
+export PATH=$PATH:$backend/.heroku/php/bin
+
 # fail hard
 set -o pipefail
 # fail harder
