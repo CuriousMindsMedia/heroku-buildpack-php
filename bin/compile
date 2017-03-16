@@ -115,6 +115,8 @@ export -f composer
 composer_vendordir=$(composer config vendor-dir)
 composer_bindir=$(composer config bin-dir)
 
+ln -s $build_dir/.heroku $build_dir/../.heroku
+
 # packages that get installed will add to this file, it's both for us and for buildpacks that follow
 # composer bin-dir goes last to avoid any conflicts
 echo "export PATH=/app/.heroku/php/bin:\$PATH:/app/$composer_bindir" > $bp_dir/export
